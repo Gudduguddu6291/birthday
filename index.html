@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Happy Birthday, Baby!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- STAGE 1: Welcome Screen -->
+    <section id="stage-1" class="stage active">
+        <div class="card">
+            <h1>Happy Birthday, Baby</h1>
+            
+            <!-- Cute Teddy Bear & Cake Scene -->
+            <div class="bear-container">
+                <div class="bear brown-bear">
+                    <div class="party-hat" style="--hat-color: #ff4081;"></div>
+                    <div class="ear left"></div>
+                    <div class="ear right"></div>
+                    <div class="face">
+                        <div class="eye left"></div>
+                        <div class="eye right"></div>
+                        <div class="blush left"></div>
+                        <div class="blush right"></div>
+                        <div class="muzzle">
+                            <div class="nose"></div>
+                            <div class="mouth"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mini-cake">
+                    <div class="cake-candle">
+                        <div class="cake-flame"></div>
+                    </div>
+                    <div class="cake-top-layer"></div>
+                    <div class="cake-bottom-layer"></div>
+                </div>
+
+                <div class="bear white-bear">
+                    <div class="party-hat" style="--hat-color: #00e5ff;"></div>
+                    <div class="ear left"></div>
+                    <div class="ear right"></div>
+                    <div class="face">
+                        <div class="eye left"></div>
+                        <div class="eye right"></div>
+                        <div class="blush left"></div>
+                        <div class="blush right"></div>
+                        <div class="muzzle">
+                            <div class="nose"></div>
+                            <div class="mouth"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="question">Are you excited for what's next?</p>
+            <div class="btn-group">
+                <button id="yes-btn" class="btn btn-yes">Yes</button>
+                <button id="no-btn" class="btn btn-no">No</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAGE 2: Balloon Pop -->
+    <section id="stage-2" class="stage">
+        <h2>Pop all 4 balloons</h2>
+        <div id="balloon-message" class="hidden-msg">You are so special</div>
+        <div class="balloon-container">
+            <div class="balloon" style="--color: #ff8da1; --id: 1;" data-id="1"><span class="string"></span></div>
+            <div class="balloon" style="--color: #b3e5fc; --id: 2;" data-id="2"><span class="string"></span></div>
+            <div class="balloon" style="--color: #c8e6c9; --id: 3;" data-id="3"><span class="string"></span></div>
+            <div class="balloon" style="--color: #d1c4e9; --id: 4;" data-id="4"><span class="string"></span></div>
+        </div>
+    </section>
+
+    <!-- STAGE 3: Blow Candle -->
+    <section id="stage-3" class="stage">
+        <h2>Blow the candle, Baby</h2>
+        <p class="subtitle">Close your eyes & make a wish</p>
+        <div class="cake-container" id="cake">
+            <div class="candle">
+                <div class="flame" id="flame"></div>
+            </div>
+            <div class="cake-top"></div>
+            <div class="cake-bottom"></div>
+        </div>
+        <p class="hint">Tap to blow the candle</p>
+    </section>
+
+    <!-- STAGE 4: Rose Bouquet -->
+    <section id="stage-4" class="stage">
+        <h2>Your Rose Bouquet 🌹</h2>
+        <div class="bouquet-container" id="bouquet">
+            <div class="bouquet">
+                <div class="wrap"></div>
+                <div class="stem s1"></div>
+                <div class="stem s2"></div>
+                <div class="stem s3"></div>
+                <div class="leaf l1"></div>
+                <div class="leaf l2"></div>
+                <div class="ribbon"></div>
+                <div class="rose r1" style="--rose-color:#ef5c81;">
+                    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+                    <span class="center"></span>
+                </div>
+                <div class="rose r2" style="--rose-color:#f5567c;">
+                    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+                    <span class="center"></span>
+                </div>
+                <div class="rose r3" style="--rose-color:#e14875;">
+                    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+                    <span class="center"></span>
+                </div>
+            </div>
+        </div>
+        <button class="btn next-stage-btn" data-next="5">Next</button>
+    </section>
+
+    <!-- STAGE 5: Sweet Moments Photo Swipe -->
+    <section id="stage-5" class="stage">
+        <h2>Some Sweet Moments</h2>
+        <p class="subtitle">(Swipe or click the cards)</p>
+        <div class="gallery-container">
+            <div class="photo-card" style="--index: 0;">
+                <img src="https://picsum.photos/300/350?random=1" alt="Moment 1">
+                <p>Happy Birthday! ❤️</p>
+            </div>
+            <div class="photo-card" style="--index: 1;">
+                <img src="https://picsum.photos/300/350?random=2" alt="Moment 2">
+                <p>Make a wish ✨</p>
+            </div>
+            <div class="photo-card" style="--index: 2;">
+                <img src="https://picsum.photos/300/350?random=3" alt="Moment 3">
+                <p>Forever Us 👩‍❤️‍👨</p>
+            </div>
+        </div>
+        <button class="btn next-stage-btn hidden" id="gallery-next-btn" data-next="6">Next</button>
+    </section>
+
+    <!-- STAGE 6: Message from Heart Envelope -->
+    <section id="stage-6" class="stage">
+        <h2>A Message From My Heart</h2>
+        <div class="envelope-wrapper" id="envelope">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="pocket"></div>
+                <div class="letter">
+                    <div class="heart-icon">❤️</div>
+                    <p><strong>To My Absolute Favorite Person,</strong></p>
+                    <p>Happy Birthday to the heart that makes my world softer, brighter, and infinitely more beautiful. If today had a sound, it would be your laugh. If it had a color, it would be the warmth in your eyes when you smile at me.</p>
+                    <p>I still don't know how I got so lucky. You walked into my life quietly and somehow rearranged everything for the better — the ordinary days became my favorite ones, simply because you were in them.</p>
+                    <p>So today, I hope the universe hands you every little joy it's been saving up: sunlight through the window, your favorite song right when you need it, and the quiet, certain feeling of being loved exactly as you are.</p>
+                    <p>Here's to you — my calm in the chaos, my favorite hello, my hardest goodbye. May this new year of your life be as extraordinary, gentle, and radiant as you make mine every single day.</p>
+                    <p>Happy Birthday, my love. I love you beyond words, beyond time, beyond measure. 🌹</p>
+                    <p style="text-align: right; font-style: italic; margin-top: 15px;">— Your Special Someone 🐻</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn next-stage-btn hidden" id="envelope-next-btn" data-next="7">One last surprise ➔</button>
+    </section>
+
+    <!-- STAGE 7: Final Gift Box Outro -->
+    <section id="stage-7" class="stage">
+        <h2>One Last Thing...</h2>
+        <div class="gift-container" id="gift-box">
+            <div class="gift-box">🎁</div>
+        </div>
+        
+        <div id="final-outro" class="final-outro hidden">
+            <div class="celebration-bears">🐻❤️🐰</div>
+            <h3>Lots of love for you ❤️</h3>
+            <p>Hope you loved your surprise!</p>
+            <button class="btn" onclick="window.location.reload()">✨ Replay ✨</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
