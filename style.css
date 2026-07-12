@@ -472,6 +472,8 @@ h2 { font-size: clamp(1.3rem, 5.5vw, 1.8rem); margin-bottom: 10px; line-height: 
         width: min(94vw, 420px);
         height: min(80vh, 620px);
         padding: 16px 14px;
+        top: 58%;
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -486,7 +488,7 @@ h2 { font-size: clamp(1.3rem, 5.5vw, 1.8rem); margin-bottom: 10px; line-height: 
         width: min(96vw, 360px);
         height: min(84vh, 560px);
         padding: 14px 12px;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -498,6 +500,7 @@ h2 { font-size: clamp(1.3rem, 5.5vw, 1.8rem); margin-bottom: 10px; line-height: 
         height: min(86vh, 520px);
         padding: 12px 10px;
         font-size: 0.7rem;
+        top: 62%;
     }
 }
 
