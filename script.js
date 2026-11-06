@@ -1,5 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // --- Audio Integration ---
+    const bgAudio = new Audio("nastelbom-happy-birthday-495860.mp3.mpeg");
+    bgAudio.loop = true;
+    let audioStarted = false;
+
+    function playAudio() {
+        if (!audioStarted) {
+            bgAudio.play()
+                .then(() => {
+                    audioStarted = true;
+                })
+                .catch(err => console.log("Audio could not start:", err));
+        }
+    }
+
     // --- Mobile viewport height fix (accounts for browser chrome / address bar) ---
     function setViewportHeight() {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
@@ -42,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     yesBtn.addEventListener('click', () => {
+        playAudio();
         navigateToStage(2);
     });
 
@@ -53,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     balloons.forEach(balloon => {
         balloon.addEventListener('click', function() {
+            playAudio();
             if(!this.classList.contains('popped')) {
                 this.classList.add('popped');
                 this.style.opacity = '0';
@@ -77,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const flame = document.getElementById('flame');
 
     cake.addEventListener('click', () => {
+        playAudio();
         flame.style.display = 'none'; 
         setTimeout(() => {
             navigateToStage(4);
@@ -86,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- GENERAL STAGE BUTTON HANDLERS ---
     document.querySelectorAll('.next-stage-btn').forEach(btn => {
         btn.addEventListener('click', function() {
+            playAudio();
             const nextTarget = this.getAttribute('data-next');
             navigateToStage(nextTarget);
         });
@@ -98,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach(card => {
         card.addEventListener('click', function() {
+            playAudio();
             if(!this.classList.contains('swiped')) {
                 this.classList.add('swiped');
                 swipedCount++;
@@ -124,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     [envelopeWrapper, envelope, envelopeLetter].forEach((element) => {
         element.addEventListener('click', (event) => {
+            playAudio();
             event.stopPropagation();
             const isOpening = !envelope.classList.contains('open');
             setEnvelopeOpen(isOpening);
@@ -135,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const finalOutro = document.getElementById('final-outro');
 
     giftBox.addEventListener('click', function() {
+        playAudio();
         this.classList.add('hidden');
         finalOutro.classList.remove('hidden');
     });
